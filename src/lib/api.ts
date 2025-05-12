@@ -6,10 +6,11 @@ import type {
 
 export async function searchUser(
   q: string,
-  page?: number,
+  page?: number
 ): Promise<PaginatedResponse<UserResponseModel>> {
   const url = new URL("https://api.github.com/search/users");
   url.searchParams.append("q", q);
+  url.searchParams.append("per_page", "100");
 
   if (page) url.searchParams.append("page", page.toString());
 
@@ -25,5 +26,5 @@ export async function searchUser(
   return {
     hasNext,
     items: data.items,
-  }
+  };
 }
