@@ -1,0 +1,10 @@
+body {
+  width: 100dvw;
+  height: 100dvh;
+  padding: 2rem 1rem;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+}
