@@ -30,7 +30,7 @@ function App() {
     enabled: !!searchQuery,
   });
 
-  const items = data?.pages.flatMap((page) => page.items) ?? [];
+  const items = data?.pages.flatMap((page) => page.data.items) ?? [];
 
   return (
     <div className={s.container}>
